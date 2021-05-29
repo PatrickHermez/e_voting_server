@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://xgrmuwffsexcbq:5309cd9aedcaf9883a05a4cf08e00a937876cd2cf49fd1352e0c61501ea7d2e8@ec2-52-213-167-210.eu-west-1.compute.amazonaws.com:5432/dfgnkqod42ks0f"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Voter {
+  id        String  @id
+  list      String?
+  candidate String?
+}
+
+model Total {
+  id         String  @id
+  lists      String?
+  Candidates String?
+}
